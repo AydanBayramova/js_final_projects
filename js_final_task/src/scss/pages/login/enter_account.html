@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Enter account</title>
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/js_final_task/src/scss/style.css">
 </head>
@@ -50,23 +50,37 @@
                   </svg><span>Login with Facebook</span></button>
                   <div class="line"><div class="lines"></div>Or login with<div class="lines"></div></div>
                   <div class="form_enter">
-                    <form action="login_enter">
+                    <form action="login_enter" id="login-form">
                        <div class="input_group">
                         <label for="name">Full Name</label>
                         <input type="text" name="fullname" placeholder="Enter your name">
                        </div>
-                      <div class="input_group">  <label for="pssword">Password</label>
-                        <input type="password" placeholder="Enter your password"></div><div class="password_forget"><p>Forget password</p></div>
+  
+                      <div class="password">
+                        <div class="input_group">  <label for="pssword">Password</label>
+                        <input type="password" placeholder="Enter your password" id="password">
+                        <i class="fas fa-eye" id="show-icon"></i>
+                        <i class="fas fa-eye-slash" id="hide-icon"></i>
+                        <div id="password-strength">
+                          <div class="strength-bar">
+                            <div class="strength-indicator"></div>
+                      </div></div>
+                             </div></div>                     
+                      
+                      
+                        <div class="password_forget"><p>Forget password</p></div>
                         <button class="login_button">Login</button>
-                        <div class="enter_end"><p>Don't have any account?</p><span>Register</span></div>
+                        <div class="enter_end"><p>Don't have any account?<span>Register</span></p></div>
                     </form>
                   </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://kit.fontawesome.com/6aed082d02.js" crossorigin="anonymous"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="/js_final_task/src/js/app.js"></script>  
+  <script src="/js_final_task/src/js/app.js"></script> 
+
 </body>
 </html>
