@@ -143,7 +143,6 @@ if (localStorage.getItem("theme") === "dark") {
 switchButton.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 
-  // Kullanıcının temasını yerel depolama kaydet
   if (document.body.classList.contains("dark")) {
     localStorage.setItem("theme", "dark");
   } else {
@@ -162,6 +161,7 @@ if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark");
   switchButtons.checked = true;
 }
+
 
 switchButtons.addEventListener("click", () => {
   document.body.classList.toggle("dark");
