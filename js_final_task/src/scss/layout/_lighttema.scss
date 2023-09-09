@@ -1,0 +1,139 @@
+body.dark{
+    background-color:$fff;
+   #film_items{
+    #svgcolor{
+        fill: $black;    
+    }
+   }
+    #logos{
+        color: $black;
+        font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 28px; /* 140% */
+letter-spacing: 0.1px
+    }
+    #card_items{
+        background-color:$grayscale-grayscale-10 ;
+        h4{
+            color: $input_color;
+        }
+        li{
+          a{
+            color: $grayscale-grayscale-70;
+          }
+        
+        }
+    }
+    #card_item{
+        background-color: black;
+    }
+    .movie_list h3{
+        color: $black;
+    }
+    .movie_list .list .list_items {
+    h3{
+        color: $black;
+        height: 30px;
+    }
+    span{
+        color: $black;
+    }
+   
+}
+.movie_list .select{
+    background-color: $fff;
+}
+#films{
+    .swiper-slide{
+        background-color: $fff;
+    }
+    .number{
+        color: $black;
+    }
+}
+.slayt .slayt_info{
+ h2{
+    color: $black;
+}
+b{
+    color: $black;
+}
+.button_p{
+    background-color: $fff;
+    color:$input_color;
+    border: 1px solid $input_color;
+}
+}
+#action{
+    .swiper-slide{
+        background-color: $fff;
+        .action_movie_info{
+            h3{
+                color: $black;
+            }
+            span{
+                color: $black;
+            }
+        }
+    }
+}
+#newfilm .swiper-slide{
+    background-color: $fff;
+    border: none;
+}
+#on2023 .img_text {
+h5{
+    color:$black;
+}
+ .img23{
+    background-color: $fff;
+ }  
+}
+#recommend_info {
+    h3{
+        color:$black;
+    }
+ 
+    b{
+        color: $black;
+    }
+}
+#cast .swiper-slide{
+    background-color: $fff;
+    .cast_list .cast_list_info{
+        p{
+            color: $black;
+        }
+        h3{
+            color: $black;
+        }
+    }
+}
+#recommendation_list h3{
+    color: $black;
+}
+#recommendation_list .recommentiion_film_info h4{
+    color: $black;
+}
+#history{
+    h4,h5{
+        color: $black;
+    }
+    .swiper-slide{
+    background-color: $fff;
+    .history_part .history_part_info{
+        b{
+            color: $black;
+        }
+    }
+}
+}
+#cast h5{
+    color: $black;
+}
+#recommend_info .like{
+    border: none;
+}
+}

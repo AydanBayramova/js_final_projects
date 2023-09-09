@@ -1,34 +1,4 @@
 
-var swiper = new Swiper(".film_slayt", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    freeMode: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-  var swiper = new Swiper(".actions", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-
-
-
-  const navLinks = document.querySelectorAll(".nav-link");
-  navLinks.forEach(link => {
-    link.addEventListener("click", event => {
-      event.preventDefault(); 
-      event.stopPropagation(); 
-      hamburger.classList.remove("active");
-      navMenu.classList.remove("active");
-    });
-  });
-
 const downloadLink = document.getElementById('setting_link');
 const drawer = document.getElementById('setprofil');
 const drawerContent = document.getElementById('pset');
@@ -36,14 +6,12 @@ const drawerContent = document.getElementById('pset');
 downloadLink.addEventListener('click', (event) => {
     event.preventDefault(); 
     event.stopPropagation(); 
-    drawer.classList.toggle('open');
+    drawer.classList.toggle('open'); 
 
- 
     drawerContent.addEventListener('click', (event) => {
         event.stopPropagation(); 
     });
 });
-
 
 document.addEventListener('click', () => {
     drawer.classList.remove('open'); 
@@ -54,9 +22,8 @@ const Profsett = document.getElementById('pro_item');
 
 proEdit.addEventListener('click', (event) => {
     event.preventDefault(); 
-    event.stopPropagation(); 
+    event.stopPropagation();
    Profilitem.classList.toggle('open'); 
-
 
    Profsett.addEventListener('click', (event) => {
         event.stopPropagation(); 
@@ -74,8 +41,8 @@ const Profsetts = document.getElementById('pros_item');
 
 proEdits.addEventListener('click', (event) => {
     event.preventDefault(); 
-    event.stopPropagation();
-   Profilitems.classList.toggle('open'); 
+    event.stopPropagation(); 
+   Profilitems.classList.toggle('open');
 
    
    Profsetts.addEventListener('click', (event) => {
@@ -83,11 +50,10 @@ proEdits.addEventListener('click', (event) => {
     });
 });
 
-
 document.addEventListener('click', () => {
    Profilitems.classList.remove('open'); 
 });
- 
+
 const proEditsd = document.getElementById('getdata');
 const Profilitemsd = document.getElementById('edit_data');
 const Profsettsd = document.getElementById('pro_data');
@@ -97,10 +63,12 @@ proEditsd.addEventListener('click', (event) => {
     event.stopPropagation();
    Profilitemsd.classList.toggle('open'); 
 
+   
    Profsettsd.addEventListener('click', (event) => {
         event.stopPropagation(); 
     });
 });
+
 
 document.addEventListener('click', () => {
    Profilitemsd.classList.remove('open'); 
@@ -133,11 +101,11 @@ const drawerr = document.getElementById('drawer');
 const drawerContentt = document.getElementById('drawer-content');
 
 downloadLinkk.addEventListener('click', (event) => {
-    event.preventDefault();
+    event.preventDefault(); 
     event.stopPropagation(); 
     drawerr.classList.toggle('open'); 
 
-   
+  
     drawerContentt.addEventListener('click', (event) => {
         event.stopPropagation(); 
     });
@@ -145,7 +113,7 @@ downloadLinkk.addEventListener('click', (event) => {
 
 
 document.addEventListener('click', () => {
-    drawerr.classList.remove('open');
+    drawerr.classList.remove('open'); 
 });
 const switchButton = document.getElementById("flexSwitchCheckChecked");
 
@@ -165,14 +133,6 @@ switchButton.addEventListener("click", () => {
     localStorage.setItem("theme", "light");
   }
 });
-const menuToggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
-
-menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
-
-
 const switchButtons = document.getElementById("flexSwitchCheckDefault");
 
 if (localStorage.getItem("theme") === "dark") {
@@ -183,6 +143,7 @@ if (localStorage.getItem("theme") === "dark") {
 switchButtons.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 
+ 
   if (document.body.classList.contains("dark")) {
     localStorage.setItem("theme", "dark");
   } else {

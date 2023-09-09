@@ -1,0 +1,246 @@
+
+@media (max-width:992px) {
+          
+    #enter_account #enter_text .bg_color .img_absolute img{
+       display: none;
+     }
+     #enter_account #enter_text .bg_color .img_relative img{
+         display: none;
+         max-width: 0;
+     }
+     #enter_account #enter_text .text_h2{
+         
+         display: flex;
+         text-align: center;
+         justify-content: center;
+         flex-direction: column;
+     
+     }
+     #enter_account #enter_text .img_tel img{
+     
+       width:0% ;
+     }
+     #enter_account #enter_text{
+         background-color: $black;
+     }
+     #enter_account #enter_text .text_h2 {
+       width: 403px;
+       margin-top: 100px;
+       margin-left: 249px;
+     }
+     #enter_account #enter_word .words_form {
+       display: flex;
+       flex-direction: column;
+       margin-top: -359px;
+      @include Flexible($items:center,$justify:center);
+      }
+   
+   #enter_account #enter_word b{
+     display: none;
+   }
+ .password-toggle {
+   position: absolute;
+   right: 243px;
+   top: 745px;
+   transform: translateY(-50%);
+   cursor: pointer;
+   color: $grayscale-grayscale-70;
+   font-size: 20px;
+   z-index: 1;
+ }
+ .bgs_color .imgs_relative {
+   display: none;
+ }
+ .bgs_color .imgs_absolute{
+   display: none;
+ }
+ #login_account p{
+   display: none;
+ }
+ #login_account #form_new .new_label_input {
+   margin: 0px 110px;
+   margin-bottom: 20px;
+   margin-left: 198px;
+ }
+ .new_button button{
+   margin-left: 93px;
+ }
+ #login_account #form_new b {
+ margin-left: 456px;
+ }
+ #film_items{
+    display: none;
+
+}
+.swiper{
+    width: 100%;
+    display: flex;
+    .swiper-slide{
+        width: 100%;
+    }
+}
+.col-9 {
+    flex: 0 0 auto;
+    width: 105%;
+}
+#card_items{
+display: none;
+}
+#action {
+margin-top: 30px;
+.action_part {
+ margin: 20px;
+ .action_movie{
+     width: 140px;
+     gap: 20px;
+}
+}}
+#films{
+margin-top: 118px;
+}
+#film_nav{
+display: none;
+}
+ #recommendation_list {
+ display: none;
+}
+ #recommend_info{
+display: flex;
+@include Flexible($justify:center,$items:center);
+}
+#rec_res {
+
+    flex: 0 0 auto;
+  width: 110%;
+
+}
+.menu {
+    display: none;
+    flex-direction: column;
+    background-color: $black;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    z-index: 999;
+
+    a{
+      color: white;
+      align-items: center;
+      justify-content: center;
+    margin-bottom: 30px;
+    font-family: $default_font_family;
+    }
+    li{
+      padding-left: 49px;
+      margin: 19px 0;
+    }
+    h4{
+      padding-left: 49px;
+         margin: 19px 0;
+    }
+}
+
+.menu.active {
+    display: flex;
+}
+
+
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    margin-left: 845px;
+    margin-top:-23px ;
+
+}
+.navbar{
+  display: block;
+}
+.form-switch {
+  padding-left: 10.5em;
+  margin-top: -25px;
+}
+#history .history_part .history_part_img img {
+  width: 80%;
+  height: 100%;
+}
+#logos{
+  display: none;
+}
+.main_part .main_img {
+  margin-left: 73px;
+  margin-top: 140px;
+}
+.main_part .main_img .position {
+  position: absolute;
+  top: 16%;
+  left: 12%;
+}
+.main_part #card {
+  margin-left: 85px;
+  margin-top: 20px;
+}
+.list_rest{
+  display: flex;
+  margin-left: -50px;
+.list{
+
+  flex-direction: row;
+}
+}
+.movie_list .list .list_items h3{
+  height: 37px;
+  font-size: 13px;
+}
+#fav_listt{
+ 
+    flex: 0 0 auto;
+    width: 59%;
+
+}
+#swiperssoon{
+ margin-left: 50px;
+  width: 95%;
+}
+#newfilm .swiper-slide {
+  border: 1px solid black;
+  width: 90%;
+  height: 385px;
+}
+#on2023 .img_text .img23 img {
+  width: 78%;
+}
+#newfilm{
+  margin-top: 152px;
+}
+#casts{
+  width: 75%;
+}
+#rec_parts_items{
+  margin-top: 120px;
+  margin-left: 13px;
+}
+#newfilm{
+  .second{
+    display: none;
+  }
+}
+#newfilm .swiper-slide img{
+  width: 562px;
+}
+#subscribe{
+  width: 77%;
+  margin-left: 80px;
+  margin-top: 50px;
+}
+#pay_item{
+  margin-left: 45px;
+
+}
+#payment .input-group{
+  margin: 10px;
+}
+
+   }

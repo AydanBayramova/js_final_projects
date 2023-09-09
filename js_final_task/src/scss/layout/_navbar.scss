@@ -1,11 +1,6 @@
 h3{
-    color: var(--grayscale-grayscale-10, #F9F9F9);
-
-/* Xtra-Large/Bold */
-font-family: Inter;
+@extend %h3;
 font-size: 20px;
-font-style: normal;
-font-weight: 700;
 line-height: 28px; /* 140% */
 letter-spacing: 0.1px;
 padding: 8px;
@@ -18,11 +13,8 @@ padding: 8px;
                 padding: 10px;
                 a{
                     text-decoration: none;
-                    color: var(--grayscale-grayscale-10, #F9F9F9);
-
-/* Medium/Medium */
-font-family: Inter;
-font-size: 16px;
+                    color: $grayscale-grayscale-10;
+ @extend %items;
 font-style: normal;
 font-weight: 500;
 line-height: 24px; /* 150% */
@@ -34,53 +26,62 @@ letter-spacing: 0.08px;
  
 }
 #film_nav a:hover{
-    color: #B43FEB;
+    color: $violet_main_color;
 }
 #film_items {
     display: flex;
-    align-items: center; /* Dikey hizalama */
+    align-items: center; 
     margin-top: 10px;
 
     svg {
         width: 24px;
         height: 24px;
         flex-shrink: 0;
+        cursor: pointer;
     }
     svg:hover{
-        color: #B43FEB;
+        color: $violet_main_color;
     }
 
     .subscribe {
         margin-left: 25px;
         margin-right: 20px;
-        color: var(--grayscale-grayscale-10, #F9F9F9);
+     
 
         /* Medium/SemiBold */
-        font-family: Inter;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 24px; /* 150% */
-        letter-spacing: 0.08px;
-        display: flex;
+     
 width: 128px;
 padding: 8px 24px;
 justify-content: center;
 align-items: center;
 border-radius: 24px;
 background: var(--main-colors-primary, #B43FEB);
-border: none;
+border: 1px solid #B43FEB;
+a{
+    @extend %items;
+    font-size: 16px;
+ 
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.08px;
+    display: flex;
+    text-decoration: none;
+    color:$grayscale-grayscale-10;
+
+}
     }
 
-    .subscribe:hover{
-      background-color: #F9F9F9;
-      color:#B43FEB;
-      border:1px solid #B43FEB;
+    .subscribe:hover {
+      background-color: $grayscale-grayscale-10;
+     a{
+        color:$violet_main_color;
+      
+     }
     }
 
     .profil_img {
         display: inline;
       margin-left: 20px;
+      cursor: pointer;
       
 
         img {
@@ -99,7 +100,7 @@ border: none;
 #card_items{
     height: 680px;
     width: 257px;
-    background: var(--additional-colors-dark-smooth, #1A161F);
+    background: $additional-colors-dark-smooth;
     /* Gerekli stiller */
     ul li{
             .mode-controller input{
@@ -128,12 +129,9 @@ border: none;
     padding-top: 20px;
     z-index: 999;
     h3{
-        color: var(--grayscale-grayscale-70, #78828A);
-
-/* Heading/H6/Bold */
-font-family: Inter;
+        color: $grayscale-grayscale-70;
+@extend %h3;
 font-size: 24px;
-font-style: normal;
 font-weight: 700;
 line-height: 32px; /* 133.333% */
 letter-spacing: 0.12px;
@@ -158,18 +156,18 @@ margin-left: 20px;
 
 #drawer a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: $fff;
     font-size: 16px;
     transition: 0.2s;
 }
 
 
 #drawer a:hover {
-    color: #B43FEB;
+    color: $violet_main_color;
 }
 
 #drawer.open {
-    left: 0; /* Drawer açıldığında */
+    left: 0;
 }
 .download_film{
 
@@ -189,12 +187,8 @@ background: url(<path-to-image>), lightgray 50% / cover no-repeat;
     .download_film_time{
         margin-left: 20px;
         b{
-            color: var(--grayscale-grayscale-80, #66707A);
-
-/* Small/Medium */
-font-family: Inter;
-font-size: 14px;
-font-style: normal;
+            color: $grayscale-grayscale-80; 
+            @extend %items;
 font-weight: 500;
 line-height: 22px; /* 157.143% */
 letter-spacing: 0.07px;
@@ -207,18 +201,16 @@ padding: 8px 24px;
 justify-content: center;
 align-items: center;
 gap: 8px;
-color: var(--main-colors-primary, #B43FEB);
-
-/* Body Text/Large/SemiBold */
+color: $violet_main_color;
 font-family: Plus Jakarta Sans;
 font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 24px; /* 150% */
+font-style:$font_style;
+font-weight: $font_weight600;
+line-height: 24px;
 letter-spacing: 0.08px;
 border-radius: 24px;
-border: 1px solid var(--main-colors-primary, #B43FEB);
-background-color: #000;
+border: 1px solid $violet_main_color;
+background-color: $black;
 border: none;
 
             }
@@ -228,12 +220,11 @@ border: none;
             
             }
             span{
-                color: var(--alerts-error, #EB3F5E);
+                color: $error;
   cursor: pointer;
-/* Body Text/Large/SemiBold */
-font-family: Plus Jakarta Sans;
+font-family: $default_font_family;
 font-size: 16px;
-font-style: normal;
+font-style: $font_style;
 font-weight: 600;
 line-height: 24px; /* 150% */
 letter-spacing: 0.08px;
@@ -247,10 +238,10 @@ letter-spacing: 0.08px;
             height: 12px;
             flex-shrink: 0;
             border-radius: 8px;
-background: var(--additional-colors-line-dark, #29282F);
+background: $additional-colors-line-dark;
         }
         i{
-            color: #B43FEB;
+            color: $violet_main_color;
             margin-top: 6px;
             margin-left: 12px;
            font-size: 32px;
@@ -258,36 +249,29 @@ background: var(--additional-colors-line-dark, #29282F);
         }
     }
         h4{
-            color: var(--addtional-colors-white, #FEFEFE);
+            color: $fff;
 
 /* Xtra-Large/Bold */
-font-family: Inter;
+font-family: $default_font_family;
 font-size: 20px;
-font-style: normal;
-font-weight: 700;
+font-style: $font_style;
+font-weight:$font_weight;
 line-height: 28px; /* 140% */
 letter-spacing: 0.1px;
         }
         p{
-            color: var(--grayscale-grayscale-80, #66707A);
-
-/* Small/Medium */
-font-family: Inter;
-font-size: 14px;
-font-style: normal;
+            color: $grayscale-grayscale-80;
+  @extend %items;
 font-weight: 500;
-line-height: 22px; /* 157.143% */
+line-height: 22px;
 letter-spacing: 0.07px;
         }
     }
 }
     h4{
-        color: var(--grayscale-grayscale-60, #9CA4AB);
-
-/* Body/Large/Regular */
-font-family: Inter;
+        color: $input_color;
+        @extend %h3;
 font-size: 16px;
-font-style: normal;
 font-weight: 400;
 line-height: 24px; /* 150% */
 letter-spacing: 0.08px;
@@ -295,7 +279,8 @@ letter-spacing: 0.08px;
     svg{
         width: 24px;
 height: 24px;
-padding: 2px; 
+padding: 2px;
+
 }
 ul{
     li{
@@ -303,16 +288,14 @@ ul{
         display: flex;
 width: 257px;
 padding: 20px 2px;
-align-items: center;
-gap: 28px;
+
+@include Flexible($gap:28px,$items:center);
          a{
-             color: var(--grayscale-grayscale-70, #78828A);
+             color: $grayscale-grayscale-70;
              margin-left: 0px;
-/* Medium/SemiBold */
-font-family: Inter;
+@extend %items;
 font-size: 16px;
-font-style: normal;
-font-weight: 600;
+
 line-height: 24px; /* 150% */
 letter-spacing: 0.08px;
 text-decoration: none;
@@ -320,36 +303,44 @@ text-decoration: none;
     }
 }
 a:hover{
-    color: #B43FEB;
+    color: $fff;
 }
 svg:hover{
     font-size: 20px;
+
 }
     
 }
 body.dark{
-    background-color: #ffffff;
-    color: #B43FEB;
+    background-color: $fff;
+    color: $violet_main_color;
 #card_items{
     h4{
-        color: #B43FEB;
+        color: $violet_main_color;
     }
     background-color: rgb(240, 233, 233);
      li{
      
         a{
-            color: #000;
+            color: $black;
           
         }
      }
 }
 #h3_logo{
-    color: #000;
+    color: $bg_dark;
 }
 #film_nav{
     a{
-        color: #000;
+        color: $black;
     }
 }
-
+}
+#logos{
+    font-family: $default_font_family;
+font-size: 20px;
+font-style: $font_style;
+font-weight: $font_weight;
+line-height: 28px; 
+letter-spacing: 0.1px;
 }

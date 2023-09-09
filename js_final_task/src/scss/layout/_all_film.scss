@@ -10,37 +10,33 @@
       .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: #000;
+        background: $black;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        @include Flexible($justify:center,$items:center);
       }
   
       .swiper-slide img {
         display: block;
-        width: 100%;
+       @extend %main_imgpart;
         height: 80%;
-        object-fit: cover;
       }
       h4{
-        color: var(--grayscale-grayscale-10, #F9F9F9);
-         
-/* Heading/H6/Bold */
-font-family: Inter;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
+        color: $grayscale-grayscale-10;
+font-family: $default_font_family;
+font-size: $border_radius;
+font-style:$font_style;
+font-weight:$font_weight;
 line-height: 32px; /* 133.333% */
 letter-spacing: 0.12px;
       }
       h5{
-        color: var(--grayscale-grayscale-10, #F9F9F9);
+        color: $grayscale-grayscale-10;
 margin-top: 10px;
 /* Large/Bold */
-font-family: Inter;
+font-family: $default_font_family;
 font-size: 18px;
-font-style: normal;
-font-weight: 700;
+font-style: $font_style;
+font-weight:$font_weight;
 line-height: 26px; /* 144.444% */
 letter-spacing: 0.09px;
       }
@@ -58,10 +54,9 @@ margin-top: -2px;
         width: 264px;
         height: 183px;
         border-radius: 16px;
-background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.16) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.16) 100%), url(<path-to-image>), rgb(0, 0, 0) 50% / cover no-repeat;
 img{
-    width: 100%;
-    height: 100%;
+   @extend %main_imgpart;
 }
       }
       .history_part_info{
@@ -70,14 +65,13 @@ img{
 height: 24px;
 b{
     overflow: hidden;
-color: var(--grayscale-grayscale-10, #F9F9F9);
+color:$grayscale-grayscale-10;
 text-overflow: ellipsis;
 whitespace: nowrap;
 
 /* Medium/Bold */
-font-family: Inter;
 font-size: 16px;
-font-style: normal;
+@extend %some;
 font-weight: 700;
 line-height: 24px; /* 150% */
 letter-spacing: 0.08px;
@@ -93,7 +87,7 @@ letter-spacing: 0.08px;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: blueviolet;
+  background-color: #B43FEB;
   color: white;
 }
 
@@ -113,8 +107,8 @@ letter-spacing: 0.08px;
 
 .bar {
   width: 25px;
-  height: 3px;
-  background-color: rgb(0, 0, 0);
+  height: 4px;
+  background-color:$black;
   margin: 3px 0;
 }
 
@@ -129,41 +123,13 @@ letter-spacing: 0.08px;
 
 .menu a {
   text-decoration: none;
-  color: white;
+  color: $grayscale-grayscale-10;
   font-weight: bold;
   font-size: 18px;
 }
 
-@media screen and (max-width: 912px) {
-  .menu {
-      display: none;
-      flex-direction: column;
-      background-color: violet;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-  }
-
-  .menu.active {
-      display: flex;
-  }
-
-  .menu li {
-      margin: 10px 0;
-  }
-
-  .menu-toggle {
-      display: flex;
-      flex-direction: column;
-      margin-left: 845px;
-      margin-top:-40px ;
-
-  }
-  .navbar{
-    display: block;
-  }
+#card_items .download_film .download_film_time .completed_part svg{
+  margin-top: -4px;
 }
-
 
 

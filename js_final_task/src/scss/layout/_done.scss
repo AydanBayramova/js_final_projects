@@ -1,0 +1,74 @@
+#done{
+    display: flex;
+   @include Flexible($justify:center, $items:center);
+   svg{
+    @include Flexible($justify:center, $items:center);
+   
+margin-top: 220px;
+width: 192px;
+height: 192px;
+flex-shrink: 0;
+   }
+   #comp{
+    margin-left: -159px;
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    margin-top: 251px;
+    
+   }
+
+}
+.comp_text{
+    h3{
+        color: $grayscale-grayscale-10;
+    text-align: center;
+    justify-content: center;
+    /* Heading/H6/SemiBold */
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: 0.12px;
+       }
+       p{
+        display: flex;
+   
+        color: var(--grayscale-grayscale-60, #9CA4AB);
+text-align: center;
+@include Flexible($justify:center);
+/* Medium/Medium */
+font-family: $default_font_family;
+font-size: 16px;
+font-style:$font_style;
+font-weight: $font_weight500;
+line-height:$border_radius; /* 150% */
+letter-spacing: 0.08px;
+       }
+}
+.comp_button{
+    display: flex;
+    margin-top: 20px;
+    @include Flexible($justify:center, $items:center);
+    button{
+        display: flex;
+padding: 16px 40px;
+@include Flexible($justify:center, $items:center);
+border-radius: 24px;
+border: 1px solid $violet_main_color;
+background-color: $black;
+a{
+    color:$violet_main_color;
+
+/* Medium/Medium */
+font-family: $default_font_family;
+font-size: 16px;
+font-style: $font_style;
+font-weight:$font_weight500;
+line-height: 24px; /* 150% */
+letter-spacing: 0.08px;
+text-decoration: none;
+}
+    }
+}

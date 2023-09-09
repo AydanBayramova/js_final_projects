@@ -44,39 +44,38 @@
                         <rect width="24" height="24" fill="white" transform="translate(0 0.362305)"/>
                       </clipPath>
                     </defs>
-                  </svg><span>Login with Google</span></button><br>
+                  </svg><span><a href="https://www.cinemax.com/warrior">Login with Google</a></span></button><br>
                 <button><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                     <path d="M10.2047 13.2398C10.1293 13.2398 8.54842 13.2403 7.8193 13.2396C7.44394 13.2394 7.31002 13.1045 7.31002 12.7267C7.30954 11.7564 7.3093 10.7861 7.31002 9.81575C7.31026 9.44279 7.45186 9.30047 7.82242 9.30023C8.55154 9.29975 10.1238 9.29999 10.2047 9.29999C10.2047 9.23351 10.2044 7.83263 10.2047 7.18751C10.2051 6.23375 10.3753 5.32079 10.8599 4.48487C11.3559 3.62927 12.0779 3.04319 13.0031 2.70431C13.5956 2.48711 14.2107 2.40047 14.8395 2.39999C15.6263 2.39951 16.413 2.40023 17.1999 2.40167C17.5381 2.40215 17.6881 2.55167 17.6888 2.89223C17.6903 3.80495 17.6903 4.71767 17.6888 5.63015C17.6883 5.97431 17.5446 6.11255 17.1987 6.11639C16.5539 6.12335 15.9085 6.11903 15.2643 6.14495C14.6137 6.14495 14.2715 6.46271 14.2715 7.13615C14.2559 7.84847 14.265 8.56151 14.265 9.29975C14.3259 9.29975 16.1775 9.29951 17.043 9.29975C17.4361 9.29975 17.5705 9.43487 17.5705 9.83015C17.5705 10.7952 17.5703 11.7605 17.5695 12.7255C17.5693 13.115 17.4431 13.2394 17.0475 13.2396C16.1821 13.2401 14.3377 13.2398 14.2571 13.2398V21.0506C14.2571 21.467 14.126 21.5998 13.7151 21.5998C12.7134 21.5998 11.7114 21.6 10.7096 21.5998C10.3465 21.5998 10.2049 21.4586 10.2049 21.0955C10.2047 18.5518 10.2047 13.3291 10.2047 13.2398Z" fill="#3D6AD6"/>
-                  </svg><span>Login with Facebook</span></button>
+                  </svg><span><a href="https://www.facebook.com/">Login with Facebook</a></span></button>
                   <div class="line"><div class="lines"></div>Or login with<div class="lines"></div></div>
-                  <div class="form_enter">
-                    <form action="login_enter" id="login-form">
-                       <div class="input_group">
-                        <label for="name">Full Name</label>
-                        <input type="text" name="fullname" placeholder="Enter your name">
-                       </div>
-  
-                      <div class="password">
-                        <div class="input_group">  <label for="pssword">Password</label>
-                        <input type="password" placeholder="Enter your password" id="password">
-                        <i class="fas fa-eye" id="show-icon"></i>
-                        <i class="fas fa-eye-slash" id="hide-icon"></i>
-                        <div id="password-strength">
-                          <div class="strength-bar">
-                            <div class="strength-indicator"></div>
-                      </div></div>
-                             </div></div>                     
-                      
-                      
-                        <div class="password_forget"><p>Forget password</p></div>
-                        <button class="login_button">Login</button>
-                        <div class="enter_end"><p>Don't have any account?<span>Register</span></p></div>
-                    </form>
+                  <div class="enter_input_label">
+                    <div class="enter_label"><label for="name">Full Name</label></div>
+                    <div class="enter_input"><input type="text" placeholder="Enter your name"></div>
                   </div>
+                  <div class="enter_input_label">
+                    <div class="enter_label"><label for="password">Password</label></div>
+                    <div class="enter_input">
+                      <input type="password" id="password" placeholder="Enter your password">
+                      <span class="password-toggle" id="togglePassword">
+                        <i class="fas fa-eye-slash"></i>
+                      </span>
+                    </div>
+                    <div id="passwordStrength" class="password-strength">
+                      <span class="weak">Weak</span>
+                      <span class="medium">Medium</span>
+                      <span class="strong">Strong</span>
+                    </div>
+              
+                  </div>
+                  <div class="login_button"><button style="background-color: #B43FEB; height:52px;" id="loginn"><a href="/js_final_task/src/scss/pages/home/main.html" style="text-decoration: none;">Login</a></button>
+                  </div>
+                  <div class="register_part"><span>Don’t have an account?</span><a href="/js_final_task/src/scss/pages/login/new_password.html"> Login</a></div>
                 </div>
             </div>
         </div>
     </div>
+    
     <script src="https://kit.fontawesome.com/6aed082d02.js" crossorigin="anonymous"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

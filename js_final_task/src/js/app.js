@@ -1,61 +1,32 @@
 
-const ShowIcon = document.querySelector("#show-icon"); //goster
-const HideIcon = document.querySelector("#hide-icon");  //gizle
-const PasswordField = document.querySelector("#password");  ///input
-//const PasswordStrength = document.querySelector("#password-strength");
+const passwordInput = document.getElementById("password");
+const togglePasswordButton = document.getElementById("togglePassword");
 
-ShowIcon.addEventListener("click", function(){ //gostere basanda  cliclimde 
-    PasswordField.setAttribute("type", "text");  //inputun taypi text olsun
-    ShowIcon.style.display = "none";   //goz isaresi gorunmesin
-    HideIcon.style.display = "inline"; //hide gorunsun
+togglePasswordButton.addEventListener("click", () => {
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    togglePasswordButton.innerHTML = '<i class="fas fa-eye"></i>';
+  } else {
+    passwordInput.type = "password";
+    togglePasswordButton.innerHTML = '<i class="fas fa-eye-slash"></i>';
+  }
 });
 
-HideIcon.addEventListener("click", function(){
-    PasswordField.setAttribute("type", "password");
-    ShowIcon.style.display = "inline";
-    HideIcon.style.display = "none";
+passwordInput.addEventListener("input", () => {
+  const password = passwordInput.value;
+  const strength = checkPasswordStrength(password);
+  passwordInput.className = strength; 
 });
 
+function checkPasswordStrength(password) {
 
-const PasswordStrength = document.querySelector("#password-strength");
-const StrengthIndicator = document.querySelector(".strength-indicator");
-
-
-PasswordField.addEventListener("input", function(){
-    const password = PasswordField.value;
-    let strength = 0;
-
-    if (password.length >= 8) {
-        strength++;
-    }
-
-    if (password.match(/[0-9]/)) {
-        strength++;
-    }
-
-    if (password.match(/[^A-Za-z0-9]/)) {
-        strength++;
-    }
-
-    const strengthPercentage = (strength / 3) * 100;
-    StrengthIndicator.style.width = strengthPercentage + "%";
-    StrengthIndicator.style.backgroundColor = getStrengthColor(strength);
-    
-    
-    PasswordStrength.style.display = "block";
-});
-
-function getStrengthColor(strength) {
-    switch (strength) {
-        case 0:
-        case 1:
-            return "red";
-        case 2:
-            return "orange";
-        case 3:
-            return "green";
-        default:
-            return "black";
-    }
+  if (password.length < 6) {
+    return "weak";
+  } else if (password.length < 10) {
+    return "medium";
+  } else {
+    return "strong";
+  }
 }
+
 
